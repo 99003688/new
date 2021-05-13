@@ -1,0 +1,58 @@
+<div class="bg-img">
+  <header>
+    <nav class ="navbar navbar-expand-md navbar-light bg-light">
+    <div><a routerLink="/homepage" class="navbar-brand">Smart Cafeteria</a></div>
+    
+    <ul class="navbar-nav">
+       
+      <li><a routerLink="/historicaloccupancy" class="nav-link">Historical Occupancy</a></li>
+      <li><a routerLink="/liveoccupancy" class="nav-link">Live Occupancy</a></li>
+      
+      <li><a routerLink="/" class="nav-link">LogOut</a></li>
+    
+    </ul>
+      </nav>
+    </header>
+    <div class="parents">
+      <div class="child">
+        <div class="change">
+        <p>Dining Area</p>
+        </div>
+        <table class="table table-bordered">
+          <thead class="thead">
+        <tr>
+        <th>
+         Current Occupancy Count
+        </th>
+        </tr>
+          </thead>
+          <tbody class="tbody">
+        <tr *ngFor="let lastOcc of lastOccupancyDetails">
+        <td  [ngClass]="{
+          'positive' : lastOcc.count > 0,
+          'negative' : lastOcc.count > 20,
+          'moderate' : lastOcc.count > 40
+       }">{{lastOcc.count}}</td>
+        </tr>
+          </tbody>
+          
+          </table>
+      </div>
+    
+      <div class="child">
+        <div class="change">
+        <p>Service Area</p>
+        </div>
+    
+      </div>
+      
+      
+    </div>
+<div class="card">
+  <div class="change">
+<div style="text-align: center;">
+<div id="line-chart" style="width:75%; height:400px;"></div>
+</div>
+</div>
+</div>
+</div>

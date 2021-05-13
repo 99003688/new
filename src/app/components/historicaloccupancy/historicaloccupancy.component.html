@@ -1,0 +1,58 @@
+<div class="bg-img">
+<header>
+    <nav class ="navbar navbar-expand-md navbar-light bg-light">
+    <div><a routerLink="/homepage" class="navbar-brand">Smart Cafeteria</a></div>
+    
+    <ul class="navbar-nav">
+       
+      <li><a routerLink="/historicaloccupancy" class="nav-link">Historical Occupancy</a></li>
+      <li><a routerLink="/liveoccupancy" class="nav-link">Live Occupancy</a></li>
+      
+      <li><a routerLink="/" class="nav-link">LogOut</a></li>
+    
+    </ul>
+      </nav>
+    </header> 
+    <div class="parents">
+        <div class="child">
+          <div class="change">
+          <p>Dining Area</p>
+        </div>
+      </div>
+      
+        <div class="child">
+          <div class="change">
+          <p>Service Area</p>
+        </div>
+      
+        </div>
+        
+        
+      </div>
+<div class="card">
+<div class="mt-5">
+    <div class="change">
+    <table class="table table-bordered">
+        <thead class="thead">
+<tr>
+    <th>
+        <div class="change">Date and Time</div>
+    </th>
+    <th>
+        <div class="change">Occupancy Count</div> 
+    </th>
+</tr>
+        </thead>
+        
+        <tbody class="tbody">
+<tr *ngFor="let currentOccupancy of currentOccupancyDetails">
+    <td>{{currentOccupancy.time}}</td>
+    <td>{{currentOccupancy.count}}</td>
+</tr>
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+
+</div>
